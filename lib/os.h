@@ -21,6 +21,14 @@
 #include "config.h"
 #endif
 
+#if HAVE_ENDIAN_H
+#include <endian.h>
+#elif HAVE_MACHINE_ENDIAN_H
+#include <machine/endian.h>
+#elif HAVE_SYS_PARAM_H
+#include <sys/param.h>
+#endif
+
 #include <math.h>
 #include <ogg/os_types.h>
 
